@@ -1,0 +1,183 @@
+/* ---------------------------------------------------
+    GLOBAL
+----------------------------------------------------- */
+:root{
+    --background-color: #424242;
+    --link-color: #212529;
+    --link-hover-color: #535353;
+    --link-bg-hover-color: #f3f3f3;
+
+}
+
+body{
+    margin:auto;
+    max-width: 1600px;
+    background: rgb(46,46,46);
+    background: linear-gradient(90deg, rgba(46,46,46,1) 0%, rgba(63,89,164,1) 50%, rgba(0,212,255,1) 100%);
+}
+
+.row{
+    margin: 0;
+}
+
+.logo-nav{
+    width: 8em;
+    height: 2em;
+}
+
+.invalid{
+    display: none;
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+    color: #dc3545;
+}
+
+/*
+@media screen and (max-width: 992px) {
+*/
+
+a:link, a:visited, a:active {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.orange-color{
+    color: orange;
+}
+
+textarea{
+    resize: none;
+}
+
+/*BOOTSTRAP*/
+.btn-link{
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+.btn-link:hover{
+    text-decoration: none;
+    color: var(--link-hover-color);
+}
+
+.btn-link:active {
+    text-decoration:none;
+}
+.btn-link:visited {
+    text-decoration:none;
+}
+/* ---------------------------------------------------
+    LOGIN
+----------------------------------------------------- */
+.logo-login{
+    width: 20rem;
+    height: 8rem;
+}
+
+#signUp{
+    display: none;
+}
+
+.form-signin{
+    /*max-width: 400px;*/
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 15px 40px 20px;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+}
+
+.form-signin .form-signin-heading{
+    margin-bottom: 30px;
+}
+
+.form-signin input[type="text"], .form-signin input[type="password"]{
+    /*margin-bottom: 20px;*/
+}
+
+.form-signin .form-control{
+    /*padding: 10px;*/
+}
+
+
+.image-field {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+.label-image-user {
+    display: block;
+    text-align: center;
+}
+#image-user {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+/* ---------------------------------------------------
+    PRINCIPAL
+-----------------------------------------------------*/
+
+.a-course:hover{
+    color: var(--link-hover-color);
+    background-color: var(--link-bg-hover-color);
+}
+
+/* ---------------------------------------------------
+    RESEÑA
+-----------------------------------------------------*/
+#form {
+    width: 250px;
+    margin: 0 auto;
+    height: 50px;
+  }
+  
+  #form p {
+    text-align: center;
+  }
+  
+  #form label {
+    font-size: 20px;
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  
+  label {
+    color: grey;
+  }
+  
+  .clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+  }
+  
+  .label-star:hover,
+  .label-star:hover ~ label {
+    color: orange;
+  }
+  
+  input[type="radio"]:checked ~ label {
+    color: orange;
+  }
+
+
+/*
+  PAY COURSE
+*/
+.priceText{
+    font-size: large;
+}
+
+/* ---------------------------------------------------
+    CHAPTER
+----------------------------------------------------- */
+.btn-chapter{
+    border: none;
+}
