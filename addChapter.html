@@ -179,93 +179,167 @@
     </div>
   </nav>
 
-  <main class="mt-2">
-    <div class="row">
-      <div class="col-12 col-md-8 offset-md-2 bg-white rounded">
-        <form action="addChapter.html" class="p-3">
-          <h4 class="form-signin-heading text-center">Crear nuevo curso</h4>
+    <main class="mt-2">
+      <div class="row ">
+        <div class="col-12 p-0 col-md-4 col-lg-4 mb-3">
+          <div class="card" >
+            <img class="card-img-top" src="img/blender.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Modelado en 3D con Blender</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <p class="m-0">Precio por capitulo: 300.00 MXN$</p>
+              </li>
+              <li class="list-group-item">
+                <p class="m-0">Precio por curso: 1800.00 MXN$</p>
+              </li>
+              <li class="list-group-item">
+                <p class="m-0"> Categoria: Programacion</p>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-          <div class="text-center mb-4 mt-4">
-            <img src="img/static/subirImagen.png" alt="" id="image-field" class="rounded-circle new-course-image">
-          </div>
-          <div class="form-group">
-            <div class="custom-file">
-                
-                <input type="file"  class="custom-file-input form-control form-control-sm" id="newImage" lang="es" onchange="previewImage(event)" accept="image/*" required />  
-                <label class="custom-file-label " for="newImage">Imagen de curso</label>
+        <div class="col-12 col-md-8 col-lg-8 pr-0 pl-0 m-0 pl-md-2">
+          <div class="bg-white p-2 rounded">
+            <h4 class="text-center">Contenido del curso</h4>
+            <!-- BTN-MODAL -->
+            <div class="pb-3 text-right">
+              <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#modalAddChapter">Agregar nuevo capitulo</button>
             </div>
-          </div>
-          <div class="form-group">
-            <label for="inputName">Nombre de curso</label>
-            <input type="text" class="form-control form-control-sm" id="name" required>
-          </div>
-          <div class="form-group">
-            <label for="inputDescription">Descripcion de curso</label>
-            <textarea class="form-control form-control-sm" id="description" name="description" rows="5"  maxlength="500" required></textarea>
-          </div>
-          <div class="form-group">
-            <div class="row">
-              <div class="col pr-2 pl-0">
-                <label for="selectCategory">Categoria</label>
-              </div>
-              <div class="col pl-2 pr-0">
-                <label id="labelNewCategory" for="newCategory">Nombre de nueva categoria</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col pr-2 pl-0">
-                <select class="form-control form-control-sm" id="selectCategory" onchange="hideNewCategory(this)">
-                  <option value="0" selected>Agregar nueva categoria</option>
-                  <option value="1">Animacion 2D</option>
-                  <option value="2">Modelado 3D</option>
-                  <option value="3">Programacion</option>
-                  <option value="4">Base de datos</option>
-                </select>
-              </div>
-              <div class="col pl-2 pr-0">
-                <input type="text" class="form-control form-control-sm" id="newCategory" required>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="row ">
-              <div class="col pr-2 pl-0">
-                <label for="selectTypePay">Metodo de pago por</label>
-              </div>
-              <div class="col pl-2 pr-0">
-                <label id="labelPrice" for="price">Precio por curso completo</label>
-              </div>
-            </div>
-            <div class="row ">
-              <div class="col pr-2 pl-0">
-                <select class="form-control form-control-sm" id="selectTypePay" onchange="changeTextTypePay(this)" >
-                  <option value="0" selected>Curso completo</option>
-                  <option value="1" >Por capitulo</option>
-                </select>
-              </div>
-              <div class="col pl-2 pr-0">
-                <div class="form-group row">
-                  <div class="col-sm-10 pl-0 pr-2">
-                    <input type="number" class="form-control form-control-sm" id="price" name="price" required>
+            
+            <!--CONTENIDO-->
+            <form action="detailsLesson.html">
+              <ul class="list-group list-group-flush" id="listChapters">
+                <li class="list-group-item">
+                  <div class="card">
+                    <div class="card-header">
+                      <h5 class="card-title">Capitulo 1: Introduccion a blender</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">Capitulo gratis</h6>
+                    </div>
+                    <div class="card-body pt-0 pb-0 pr-2 pl-2">
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item font-weight-bold">Recursos</li>
+                        <li class="list-group-item">
+                          <a href="img/Hand 3D modeling Maya.mp4" target="a_blank">video.mp4</a>
+                        </li>
+                        <li class="list-group-item">
+                          <a href="img/blender.jpg" target="a_blank">blender.png</a>
+                        </li>
+                        <li class="list-group-item">
+                          <a href="img/static/user.png" target="a_blank">user.png</a>
+                        </li>
+  
+                      </ul>
+                    </div>
                   </div>
-                  <label class="col-sm-2 col-form-label pl-0 pr-0 pt-1 text-left">MXN$</label>
+                </li>
+                <li class="list-group-item">
+                  <div class="card">
+                    <div class="card-header">
+                      <h5 class="card-title">Capitulo 2: Primer primitivo</h5>
+                    </div>
+                    <div class="card-body pt-0 pb-0 pr-2 pl-2">
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item font-weight-bold">Recursos</li>
+                        <li class="list-group-item">
+                          <a href="img/Hand 3D modeling Maya.mp4" target="a_blank">video.mp4</a>
+                        </li>
+                        <li class="list-group-item">
+                          <a href="img/blender.jpg" target="a_blank">blender.png</a>
+                        </li>
+                        <li class="list-group-item">
+                          <a href="img/static/user.png" target="a_blank">user.png</a>
+                        </li>
+  
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="card">
+                    <div class="card-header">
+                      <h5 class="card-title">Capitulo 3: Apliacacion de materiales</h5>
+                    </div>
+                    <div class="card-body pt-0 pb-0 pr-2 pl-2">
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item font-weight-bold">Recursos</li>
+                        <li class="list-group-item">
+                          <a href="img/Hand 3D modeling Maya.mp4" target="a_blank">video.mp4</a>
+                        </li>
+  
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                
+              </ul>
+              <div class="m-3">
+                <button type="submit" class="btn btn-primary btn-block" >PUBLICAR CURSO</button>
+              </div>
+            </form>
+            
+           
+          
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- MODAL -->
+    <div class="modal fade" id="modalAddChapter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Agregar capitulo</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form action="">
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="inputName">Nombre de capitulo</label>
+                <input type="text" class="form-control" id="inputName" required>
+              </div>
+              <div class="form-group">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="customFile" accept="video/mp4,video/x-m4v,video/*" required>
+                  <label class="custom-file-label" for="customFile">Video del capitulo</label>
                 </div>
               </div>
+              <div class="form-group">
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1">
+                  <label class="custom-control-label" for="customCheck1">Capitulo gratis</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="customFile2" >
+                  <label class="custom-file-label" for="customFile">Nuevo recurso</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Recursos adicionales</label>
+                <ul id="resources">
+                
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="dropdown-divider"></div>
-          <div class="form-group mt-3">
-            <button type="submit" class="btn  btn-primary btn-block">Continuar</button>
-          </div>
-        </form>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+              <button type="submit" class="btn btn-primary">Agregar</button>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
-  </main>
+    </main>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="js/functions.js"></script>
-
 </body>
 </html>
